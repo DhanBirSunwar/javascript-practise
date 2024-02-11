@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="https://a.storyblok.com/f/103666/715x402/fcdcaf318a/download.webp"
+      fetchpriority="high"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,400;1,6..12,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              nunito: ['Nunito', 'sans-serif'],
+            },
+            colors: {
+              clifford: '#da373d',
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-nunito">
+    <div class="fixed top-0 left-0 w-full h-3 bg-black">
+      <div id="myBar" class="h-full bg-green-500"></div>
+    </div>
+    <section class="max-w-screen-lg px-4 py-8 mx-auto sm:px-6 sm:pt-12 lg:px-8">
+      <h1
+        class="text-2xl font-bold text-gray-900 sm:text-3xl font-nunito"
+        id="title"
+      ></h1>
+      <div class="mt-6 flex space-x-4">
+        <img
+          class="w-11 h-11 rounded-full object-cover"
+          src="https://a.storyblok.com/f/103666/1920x1272/b326980d7b/test.jpeg"
+          alt="Rounded avatar"
+        />
+        <div class="space-y-2">
+          <p>
+            Dhan Bir Sunwar
+            <span class="text-red-500 pl-2 cursor-pointer" id="follow"
+              >Follow</span
+            >
+          </p>
+          <p class="text-sm text-gray-500/75 readingTime">
+            10 min read <span class="pl-8">Feb 12, 2024</span>
+          </p>
+        </div>
+      </div>
+      <img
+      id="imgText"
+        src="https://a.storyblok.com/f/103666/1920x1272/b326980d7b/test.jpeg"
+        alt=""
+        class="object-cover w-full h-full mt-10 mix-blend-overlay"
+        style="
+          background-image: url('https://a.storyblok.com/f/103666/715x402/fcdcaf318a/download.webp');
+        "
+      />
+    </section>
+    <article
+      id="article"
+      class="max-w-screen-lg px-4 py-8 mx-auto sm:px-6 sm:pb-12 lg:px-8"
+    >
+      <p>
+        A title showcasing the determination and tenacity of a young man named
+        Alex, who lived in a bustling city filled with ambition and opportunity.
+        With a strong fascination for the digital realm and its endless
+        possibilities, Alex set out on a quest to become a skilled JavaScript
+        developer. Despite facing numerous hurdles, he never wavered in his
+        commitment to learning and growing as a programmer. Armed with an
+        unquenchable thirst for knowledge and an unbreakable spirit, Alex began
+        his journey towards his goal. The world of programming was complex and
+        daunting, but he was undeterred. Concepts like loops and conditionals
+        proved to be challenging, but Alex refused to let them be roadblocks on
+        his path. A title showcasing the determination and tenacity of a young
+        man named Alex, who lived in a bustling city filled with ambition and
+        opportunity. With a strong fascination for the digital realm and its
+        endless possibilities, Alex set out on a quest to become a skilled
+        JavaScript developer. Despite facing numerous hurdles, he never wavered
+        in his commitment to learning and growing as a programmer. Armed with an
+        unquenchable thirst for knowledge and an unbreakable spirit, Alex began
+        his journey towards his goal. The world of programming was complex and
+        daunting, but he was undeterred. Concepts like loops and conditionals
+        proved to be challenging, but Alex refused to let them be roadblocks on
+        his path. A title showcasing the determination and tenacity of a young
+        man named Alex, who lived in a bustling city filled with ambition and
+        opportunity. With a strong fascination for the digital realm and its
+        endless possibilities, Alex set out on a quest to become a skilled
+        JavaScript developer. Despite facing numerous hurdles, he never wavered
+        in his commitment to learning and growing as a programmer. Armed with an
+        unquenchable thirst for knowledge and an unbreakable spirit, Alex began
+        his journey towards his goal. The world of programming was complex and
+        daunting, but he was undeterred. Concepts like loops and conditionals
+        proved to be challenging, but Alex refused to let them be roadblocks on
+        his path.
+      </p>
+      <p>
+        A title showcasing the determination and tenacity of a young man named
+        Alex, who lived in a bustling city filled with ambition and opportunity.
+        With a strong fascination for the digital realm and its endless
+        possibilities, Alex set out on a quest to become a skilled JavaScript
+        developer. Despite facing numerous hurdles, he never wavered in his
+        commitment to learning and growing as a programmer. Armed with an
+        unquenchable thirst for knowledge and an unbreakable spirit, Alex began
+        his journey towards his goal. The world of programming was complex and
+        daunting, but he was undeterred. Concepts like loops and conditionals
+        proved to be challenging, but Alex refused to let them be roadblocks on
+        his path.
+      </p>
+
+      <div class="mt-10 text-sm text-gray-500/75 flex gap-12 mb-4">
+        <p class="text-sm">Reading compleated: <span id="progress"></span></p>
+        <i
+          class="ri-shake-hands-line cursor-pointer text-xl flex items-center"
+          id="likes"
+        ><span class="text-sm pl-1" id="likeCount">0</span></i>
+        </i>
+      </div>
+      <p class="text-sm text-gray-500/75 readingTime">10 min read</p>
+      <div class="mt-10">
+              <p>How much rating would you like to give for this book?</p>
+<div class="flex space-x-2">
+  <i class="ri-star-line text-2xl cursor-pointer text-gray-500 star"></i>
+  <i class="ri-star-line text-2xl cursor-pointer text-gray-500 star"></i>
+  <i class="ri-star-line text-2xl cursor-pointer text-gray-500 star"></i>
+  <i class="ri-star-line text-2xl cursor-pointer text-gray-500 star"></i>
+  <i class="ri-star-line text-2xl cursor-pointer text-gray-500 star"></i>
+</div>
+      </div>
+    </article>
+
+    <footer class="bg-gray-50">
+      <div class="max-w-screen-lg px-4 py-8 mx-auto sm:px-6 lg:px-8">
+        <div class="sm:flex sm:items-center sm:justify-between">
+          <div class="flex justify-center text-teal-600 sm:justify-start">
+            <img
+              src="assets/instagramProfile-110x110px.png"
+              alt=""
+              width="32"
+              height="32"
+            />
+          </div>
+
+          <p
+            class="mt-4 text-sm text-center text-gray-500 lg:mt-0 lg:text-right"
+          >
+            Copyright &copy;
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            . All rights reserved. Dhan Bir Sunwar.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+  shape-margin: 0.75rem;
+}
+
+.gradent {
+  background-image: linear-gradient(to right, #181717, #5c5b5a);
+}
+
+.active {
+  color: red !important;
+}

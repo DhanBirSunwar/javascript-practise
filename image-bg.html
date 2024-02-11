@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript</title>
+    <link rel="stylesheet" href="style.css" />
+      <link rel='preload' as='image' href='https://a.storyblok.com/f/103666/715x402/fcdcaf318a/download.webp' fetchpriority='high'>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
+        <div class="sm:flex sm:items-center sm:justify-between">
+          <div class="text-center sm:text-left">
+            <h1 class="text-2xl font-bold text-gray-900 sm:text-3xl">
+              Welcome Back, Barry!
+            </h1>
+
+            <p class="mt-1.5 text-sm text-gray-500">
+              Let's write a new blog post! 🎉
+            </p>
+          </div>
+
+          <div
+            class="flex flex-col gap-4 mt-4 sm:mt-0 sm:flex-row sm:items-center"
+          >
+            <button
+              class="inline-flex items-center justify-center gap-1.5 rounded-lg border border-gray-200 px-5 py-3 text-gray-500 transition hover:bg-gray-50 hover:text-gray-700 focus:outline-none focus:ring"
+              type="button"
+            >
+              <span class="text-sm font-medium"> View Website </span>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                />
+              </svg>
+            </button>
+
+            <button
+              class="block px-5 py-3 text-sm font-medium text-white transition bg-indigo-600 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring"
+              type="button"
+            >
+              Create Post
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section>
+      <!-- <div class="relative bg-gradient-to-br from-blue-500 to-purple-600 h-[700px]"> -->
+      <div class="relative h-[700px] gradent">
+        <img
+          src="https://images.unsplash.com/photo-1682686580186-b55d2a91053c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8"
+          alt=""
+          class="absolute object-cover w-full h-full mix-blend-overlay"
+            style="background-image: url('https://a.storyblok.com/f/103666/715x402/fcdcaf318a/download.webp')"
+        />
+        <div
+          class="flex flex-col items-center justify-center h-full text-white"
+        >
+          <h1 class="text-4xl font-bold">Your Banner Title</h1>
+          <p class="mt-2">Your banner description goes here.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
+      <h1>Exercise 2 - Javascript Basics</h1>
+      <p>
+        <strong>Question:</strong> Write a javascript function that takes an
+        array of numbers and returns the sum of all elements in the array.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ex eos
+        eius reprehenderit dignissimos ipsa, sit dolorem odit commodi maxime
+        doloremque beatae, debitis repudiandae reiciendis. Temporibus eos
+        assumenda excepturi recusandae! lorem(
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quam
+        quam, condimentum ut tempor ac, consectetur sit amet felis. In hac
+        habitasse platea dictumst. Fusce ut risus et ex aliquet aliquet et at
+        ligula. Nulla eu dui lobortis, porta ligula quis, pellentesque purus.
+        Mauris sapien ante, tincidunt vitae diam ac, accumsan pulvinar felis.
+        Etiam porttitor quam nunc, vel efficitur tortor viverra eget. In tellus
+        mauris, pharetra quis neque sed, facilisis auctor massa. Curabitur nulla
+        felis, aliquet vulputate consequat eu, porta nec dui. Sed tortor nisl,
+        condimentum suscipit blandit lobortis, imperdiet ut felis. Nunc
+        consectetur lectus eget neque molestie, in placerat augue mattis.
+        Aliquam erat volutpat. Aliquam interdum faucibus facilisis. Cras
+        convallis tortor a odio egestas viverra. Quisque mi dolor, ullamcorper
+        ut mollis ac, condimentum rutrum felis. Quisque in magna blandit,
+        maximus elit ut, sagittis odio. Ut sodales, nisi ac condimentum
+        suscipit, dolor libero blandit erat, a consectetur dui erat eget lorem.
+        Aenean maximus felis dignissim, semper mauris a, viverra risus.
+        Pellentesque id nisl et mauris rutrum faucibus. Donec ac placerat
+        turpis. Integer ultricies ultricies lacus. Integer convallis condimentum
+        nulla at tincidunt. Sed dictum at elit hendrerit vulputate. Nullam
+        varius ante metus, condimentum ullamcorper ipsum bibendum vel. Cras et
+        pharetra erat, quis consequat arcu. Sed non magna a arcu iaculis
+        iaculis. Nulla dapibus, mauris eu consequat blandit, purus erat
+        efficitur magna, eget facilisis sem dolor quis quam. Nunc dapibus
+        placerat nisi, maximus pretium est vestibulum nec. Nunc lacus tellus,
+        elementum vitae lectus eu, ultricies semper mauris. Nullam non facilisis
+        sapien. Sed in convallis turpis, a facilisis nisi. Cras ultrices eu nisi
+        sed lacinia. Fusce pellentesque sed enim eget hendrerit. Lorem ipsum
+        dolor sit amet, consectetur adipiscing elit. Pellentesque ac faucibus
+        ante, quis scelerisque ex. Integer vitae libero faucibus odio fringilla
+        porttitor. Duis vitae lectus porttitor, semper dui sit amet, ultrices
+        massa. Praesent lobortis massa libero, vel sodales nisi ullamcorper ut.
+        Sed pellentesque eros ac nunc dapibus, sed pellentesque magna rhoncus.
+        Nam vel quam leo. Donec sed volutpat ligula. Maecenas vel euismod odio.
+        Ut posuere tellus nec accumsan fermentum. Pellentesque sed tempor
+        turpis, vitae rhoncus eros. Pellentesque ullamcorper arcu metus, nec
+        pharetra ipsum porttitor in. Curabitur molestie quam et sollicitudin
+        tincidunt. Praesent rhoncus ullamcorper lorem ac sodales. Etiam ac
+        interdum sapien. Vivamus vitae lectus molestie lorem gravida aliquam. In
+        hac habitasse platea dictumst. Suspendisse potenti. Praesent condimentum
+        risus et finibus auctor. Ut lobortis, nibh vel auctor sagittis, sem
+        sapien blandit massa, fermentum maximus metus tellus faucibus diam.
+        Nullam faucibus molestie magna vitae condimentum. Sed pulvinar eleifend
+        tellus, consequat lobortis lorem blandit sed. Fusce venenatis ac nisi ac
+        luctus. Donec pretium ex ut risus aliquam, ac cursus risus sodales. In
+        sed mauris sagittis, porta urna in, malesuada libero. Cras lacinia
+        condimentum interdum. Fusce mauris arcu, pharetra non tristique id,
+        lobortis non neque. In hac habitasse platea dictumst. Aliquam erat
+        volutpat. Aenean leo arcu, semper id eleifend non, eleifend id mi. Sed
+        turpis sem, finibus sed sapien sit amet, vehicula dictum est. Duis
+        turpis ipsum, consectetur non nibh et, egestas fermentum enim. Curabitur
+        malesuada commodo vulputate. Vivamus euismod sit amet mauris nec
+        egestas. Ut nunc lacus, varius id pellentesque dictum, blandit quis
+        magna. Vivamus ullamcorper pellentesque arcu. Fusce mollis enim vitae
+        tortor pulvinar sollicitudin. In hac habitasse platea dictumst.
+        Phasellus fringilla purus sit amet imperdiet eleifend. Nunc sodales
+        consectetur mi, sed pharetra elit posuere eu. Donec vulputate dapibus
+        lorem, non aliquet velit gravida sit amet. Sed lacinia luctus mauris nec
+        laoreet. Mauris commodo sem sed congue commodo. Nunc tortor tellus,
+        finibus non tempus sed, mollis in justo. In hac habitasse platea
+        dictumst. Maecenas ipsum ex, dignissim sit amet sapien at, ullamcorper
+        fringilla sapien. Fusce tempor gravida auctor. Proin elementum vitae dui
+        nec commodo. Fusce at quam eget turpis interdum tempor. Ut id faucibus
+        ipsum, vel egestas metus. Nam nec ipsum enim. Suspendisse mattis aliquam
+        velit ac maximus. Vivamus id nisi diam. Proin eu pretium risus. Mauris
+        sapien erat, interdum a nisi eu, finibus eleifend velit. Fusce a mi
+        eros. Sed pharetra erat mauris, quis tempor mi elementum ut. Vestibulum
+        ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+        curae; Sed iaculis elit at velit auctor, eu porttitor velit eleifend.
+        Aenean eu semper nisl. Sed vitae risus ac diam tincidunt aliquam. Ut at
+        ipsum id turpis sollicitudin sagittis a vel augue. Nunc sed laoreet leo.
+        Quisque sed lectus sit amet nunc ultrices tincidunt. Proin iaculis, elit
+        sit amet semper dapibus, nibh lectus bibendum lectus, id facilisis
+        sapien dolor porta ipsum. Etiam quis erat erat. Sed pellentesque, orci
+        in hendrerit molestie, est lorem mollis dolor, in condimentum sapien
+        urna sit amet turpis. Phasellus at mollis justo. Suspendisse leo nibh,
+        auctor ac massa dignissim, ultricies tincidunt dolor. Ut aliquet felis
+        augue, ut dictum magna pretium a. Phasellus scelerisque congue gravida.
+        Curabitur nec libero a ex aliquam vehicula vel sed massa. Suspendisse ut
+        orci at mauris ultricies tristique in eget augue. Nulla accumsan risus
+        eu ex consectetur aliquam. Integer semper sapien nec risus ultrices, non
+        mollis sem cursus. Duis ac orci accumsan, placerat augue in, rutrum
+        enim. Pellentesque vestibulum neque eu bibendum tincidunt. Aliquam
+        faucibus purus ut est pretium bibendum. Ut malesuada sapien mattis
+        lacinia sollicitudin. Integer malesuada, ex sagittis vulputate
+        hendrerit, diam felis pellentesque eros, non commodo lacus erat sit amet
+        magna. Donec at sem dolor. Praesent semper enim a mi fermentum rhoncus.
+        Etiam a eros ante. Morbi ultricies egestas est, sit amet auctor quam
+        pretium id. Donec porta neque in lorem varius, a mattis leo fringilla.
+        Sed vulputate tristique ex ut facilisis. Ut in posuere risus, id
+        vulputate sapien. Fusce scelerisque posuere est, non pellentesque risus
+        ornare a. Nunc maximus viverra elit nec hendrerit. Praesent quis lorem
+        pharetra, ornare eros vel, ullamcorper dui. Sed nec hendrerit elit, ut
+        dictum sem. Quisque mauris odio, iaculis non dui nec, posuere
+        consectetur tellus. Morbi pulvinar eget nisl in faucibus. Phasellus eget
+        orci nulla. Nulla facilisi. Etiam velit diam, rhoncus id justo nec,
+        fringilla suscipit dui. Nunc pretium fringilla interdum. In egestas
+        neque vitae dui efficitur commodo. In hac habitasse platea dictumst.
+        Duis id sapien eros. Aenean fermentum dui non justo dignissim vulputate.
+        Etiam vulputate nibh non accumsan ultricies. Vestibulum hendrerit orci
+        facilisis tortor blandit sagittis. Morbi nisi sem, ullamcorper nec enim
+        in, eleifend congue est. Donec fermentum a ligula vel pellentesque.
+        Vivamus cursus ultrices suscipit. Donec blandit, mi nec molestie
+        vehicula, nisl magna gravida dolor, quis suscipit lectus metus in massa.
+        Donec sit amet nisl convallis, pellentesque mi pretium, viverra libero.
+        Nam quis dolor vel diam pretium sollicitudin eget ut massa. Ut sit amet
+        tortor nec massa pharetra dictum ac eget felis. In porta pulvinar purus
+        ac suscipit. In a sollicitudin est, id semper mauris. Donec non mattis
+        justo. Morbi faucibus auctor mauris, eget elementum urna lobortis vitae.
+        Aliquam eget nulla sapien. Nulla tortor augue, accumsan eu nisi ac,
+        sagittis posuere erat. Fusce maximus nulla nec sagittis porta. Curabitur
+        et ultrices arcu. Sed porttitor eu magna lobortis posuere. Nulla
+        facilisi. Sed scelerisque pellentesque sagittis. Sed a nunc sed eros
+        consectetur porttitor. Fusce at tempor lacus. Sed tempor pellentesque
+        velit, sit amet gravida purus congue efficitur. Proin libero lectus,
+        tincidunt et orci in, iaculis suscipit metus. Suspendisse non nisl enim.
+        Nunc dapibus nunc erat, ac mattis orci faucibus vitae. Integer at libero
+        facilisis, lobortis felis vel, vulputate est. Maecenas commodo sodales
+        tristique. Nam vel ex nibh. Sed vitae nisi diam. Praesent tempor libero
+        id dignissim consectetur. Maecenas tellus orci, faucibus et nisi vitae,
+        auctor efficitur nunc. Aliquam erat volutpat. Phasellus ullamcorper ex
+        vitae elementum sagittis. Sed pulvinar posuere nisl a commodo. In id est
+        felis. Donec vestibulum, diam a aliquam eleifend, augue mi venenatis
+        diam, a bibendum enim felis id sapien. Donec et tristique dui. Mauris et
+        quam imperdiet quam fermentum condimentum. Maecenas in porttitor lacus,
+        vitae convallis mauris. Suspendisse ac odio sed orci fermentum vehicula
+        quis in odio. Quisque nec sem et libero gravida rutrum eget vel purus.
+        Pellentesque a tempus eros, vitae faucibus elit. Maecenas vel justo
+        enim. Proin mauris libero, dignissim vel justo sed, pharetra ornare
+        turpis. Sed a sagittis nisi, vitae cursus sapien. Suspendisse venenatis
+        porttitor nunc sed tempor. Cras ac rutrum enim. Suspendisse tristique
+        urna nibh, ac semper metus imperdiet a. Duis id tellus ut mauris egestas
+        facilisis. Proin sit amet volutpat orci, ut aliquam mi. Pellentesque
+        viverra neque eget urna vestibulum pellentesque. Fusce sed tellus
+        malesuada, maximus orci ut, lacinia sem. Vestibulum sapien mi, interdum
+        varius quam non, varius rhoncus ligula. In consequat, eros ac vulputate
+        bibendum, felis ex posuere erat, ac dapibus tellus lorem sed arcu. Lorem
+        ipsum dolor sit amet, consectetur adipiscing elit. In eget elit a mauris
+        cursus porta sed vitae mi. Maecenas interdum ultricies dictum. Nulla
+        malesuada convallis tellus vitae vehicula. Sed volutpat, lectus quis
+        vulputate dictum, mauris leo commodo ex, at aliquet eros est venenatis
+        dui. Morbi dui mi, tincidunt id suscipit sed, dapibus a metus. Morbi
+        ultrices sapien est. Nullam neque metus, sollicitudin ut cursus ac,
+        efficitur sit amet ipsum. Duis convallis, neque in consectetur
+        ultricies, diam mauris molestie nisi, quis feugiat lorem ex vel ante.
+        Vestibulum neque velit, interdum at accumsan id, pharetra sed neque.
+        Nunc ut sem leo. Fusce sagittis vulputate suscipit. Praesent iaculis
+        molestie pellentesque. Donec lobortis arcu nec lectus vestibulum,
+        ultricies condimentum elit sodales. Nunc mattis dapibus erat, a faucibus
+        velit porttitor congue. Ut sit amet enim et ex tempus gravida. Aliquam
+        sagittis condimentum eros et mattis. Sed faucibus ac mauris finibus
+        luctus. Sed sapien augue, viverra a interdum at, tincidunt vitae erat.
+        Proin euismod, quam at luctus euismod, felis felis ornare velit, vitae
+        tristique nisi nisl eget elit. Nulla gravida urna vel ultricies
+        tincidunt. Etiam vel erat at urna imperdiet auctor. Integer dignissim
+        velit in sem vehicula, et scelerisque sem sodales. Nullam sagittis in
+        diam ac ultricies. Nam et velit molestie, aliquam nisl a, sollicitudin
+        augue. Maecenas blandit egestas ultricies. Nam condimentum nulla id mi
+        congue feugiat sed in leo. Nunc vitae velit felis. Lorem ipsum dolor sit
+        amet, consectetur adipiscing elit. Sed in turpis tincidunt magna congue
+        pharetra. Suspendisse pulvinar, arcu eu accumsan tempor, elit diam
+        ultrices nisi, quis egestas est quam in metus. Nam ornare volutpat augue
+        in sollicitudin. Nulla in turpis mauris. Morbi sit amet risus quis eros
+        posuere vestibulum sit amet in justo. Nunc et erat justo. Praesent
+        ullamcorper velit sed ante dapibus volutpat. Quisque vitae libero
+        pulvinar, tempus leo eget, tristique libero. In auctor interdum ante a
+        suscipit. Aenean et viverra velit, quis hendrerit ipsum. Suspendisse
+        neque dolor, posuere non euismod at, ullamcorper ac velit. Nam porta
+        mattis tellus sit amet vestibulum. Morbi faucibus vitae nisl sit amet
+        convallis. Aenean tincidunt neque massa, ac interdum augue egestas at.
+        Mauris eleifend orci elit, eget feugiat urna feugiat volutpat. Praesent
+        cursus, mi id ornare feugiat, lacus turpis finibus sem, vitae eleifend
+        tellus justo eu lectus. Nulla pulvinar justo sit amet leo ultrices
+        consectetur. Pellentesque eleifend odio nisi, id dignissim lorem
+        tristique et. Aliquam vulputate mollis tincidunt. Ut turpis sem,
+        volutpat sed condimentum ac, mattis at dolor. Duis consectetur porta leo
+        in aliquam. Donec ipsum justo, maximus sit amet porta eu, facilisis a
+        leo. Etiam at blandit augue. Maecenas tristique convallis nisl sit amet
+        volutpat. Donec sed faucibus lorem. Pellentesque viverra vitae dolor ac
+        lacinia. Vestibulum eu hendrerit enim. Aenean sit amet nibh nisi. Nullam
+        vitae dignissim elit. Phasellus gravida consectetur tempus. Phasellus
+        facilisis sem semper dolor porta, ac commodo odio elementum. Curabitur
+        cursus mattis diam, ac pretium quam egestas ut. Nulla auctor fringilla
+        purus sed tincidunt. In consectetur viverra dolor, vel lacinia arcu
+        placerat eu. Integer semper tempor metus non blandit. Aenean ultricies
+        risus vitae dolor luctus, vel tempus nulla interdum. Maecenas rutrum
+        nulla a turpis pretium varius. Aenean fermentum, ante quis elementum
+        placerat, neque nisi maximus sapien, id scelerisque nulla lacus quis
+        nisl. Integer vel purus scelerisque, tristique purus in, condimentum
+        nibh. Praesent elementum tincidunt erat ut aliquet. Sed aliquet
+        vulputate semper. Donec vestibulum lobortis justo, et ultrices erat
+        posuere id. Sed et orci vel arcu semper ultricies nec at augue. Fusce ut
+        risus posuere felis egestas aliquet. Sed semper et est quis tempor.
+        Pellentesque ut dapibus augue. Vestibulum ut consequat massa.
+        Suspendisse id ultrices turpis, in faucibus nunc. Pellentesque finibus
+        erat lectus, nec tempus ante dignissim a. Cras gravida magna imperdiet
+        orci lobortis, bibendum efficitur dolor pellentesque. Quisque aliquam
+        lacus a mi vehicula pharetra. Praesent a purus eu nulla mattis rutrum
+        vel vel diam. Proin tristique, turpis a sagittis pulvinar, urna ex
+        hendrerit ligula, viverra mattis ante neque ut leo. Nam et arcu eget
+        ligula porttitor cursus id sit amet sem. In hac habitasse platea
+        dictumst. Nulla at nunc gravida, pellentesque dolor nec, faucibus erat.
+        Aliquam id nisi magna. Nullam egestas, lorem et congue molestie, neque
+        mi ornare nunc, vel fringilla orci mi a felis. Nam hendrerit, dui in
+        consectetur eleifend, eros libero rhoncus neque, fringilla posuere arcu
+        risus sed nulla. Vivamus in dui cursus, venenatis libero id, viverra
+        leo. Sed tempor augue at ex aliquam, vitae dignissim nisi elementum. Sed
+        sit amet accumsan orci, nec egestas nisi. Donec maximus fermentum neque,
+        non luctus tortor luctus non. Fusce nec maximus velit. Vivamus lacus
+        dui, elementum non euismod eu, lacinia pellentesque sem. Sed euismod
+        magna ac nisl eleifend, in blandit ipsum tempus. Pellentesque habitant
+        morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+        Integer nibh ipsum, convallis vestibulum diam eget, porta varius sapien.
+        Nunc a justo vel augue pellentesque egestas ac in erat. Interdum et
+        malesuada fames ac ante ipsum primis in faucibus. Aliquam metus massa,
+        congue sit amet nisl ac, faucibus fringilla velit. Ut turpis arcu,
+        tempus sit amet augue in, aliquam egestas quam. Etiam vehicula ante
+        urna, sed venenatis ex molestie vel. Nunc at nulla id orci varius
+        bibendum. Maecenas porttitor tristique mauris quis euismod. Fusce
+        lacinia nulla id quam ultrices tincidunt. Pellentesque condimentum
+        mattis velit sed aliquam. Donec aliquam nibh vitae lectus congue
+        fermentum. Aliquam erat volutpat. Phasellus tempor velit vestibulum,
+        imperdiet dolor quis, volutpat eros. In rhoncus nulla eu nisi laoreet
+        dignissim. Curabitur iaculis, ex nec scelerisque finibus, orci nunc
+        pharetra ipsum, ac faucibus nibh diam ut ante. Praesent ipsum arcu,
+        consectetur vel porta sed, molestie id arcu. Fusce condimentum id odio
+        facilisis condimentum. Sed mollis leo at eros mollis pellentesque. Donec
+        aliquet lacus id diam tincidunt facilisis. Pellentesque laoreet
+        efficitur orci sed fringilla. Fusce laoreet risus a turpis fermentum, eu
+        efficitur neque facilisis. In sit amet quam ligula. Phasellus eu mi in
+        orci varius pellentesque. Nulla gravida quis odio interdum porta. Morbi
+        in cursus massa, sit amet congue enim. Vestibulum interdum sapien ac
+        lorem dignissim, vitae congue metus tincidunt. Praesent posuere urna
+        sapien, at vehicula velit ullamcorper ac. Nullam gravida massa egestas,
+        viverra magna at, elementum arcu. Mauris nibh urna, hendrerit vel
+        viverra ut, gravida sit amet mi. Duis tristique felis et tempus
+        eleifend. Pellentesque vitae feugiat magna. Etiam efficitur sollicitudin
+        sem, ac condimentum turpis rutrum ut. Nam gravida, neque non mattis
+        mattis, felis nulla semper quam, eu auctor nunc nisl sed turpis.
+        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+        cubilia curae; Suspendisse sollicitudin sollicitudin condimentum. Fusce
+        cursus ligula tempus ligula feugiat, a pulvinar augue pharetra. Maecenas
+        vitae elit vel lorem pretium sodales. Vivamus pharetra dolor id posuere
+        viverra. Mauris consectetur odio et nulla accumsan feugiat. Aliquam quis
+        porttitor lectus. Morbi lobortis fringilla tortor, in pulvinar nulla
+        maximus quis. Sed elementum est vitae arcu posuere, ac maximus nisi
+        blandit. Nullam urna arcu, molestie vel dui vel, sollicitudin tempus
+        ligula. Proin dapibus eget metus sit amet venenatis. Aenean vitae massa
+        volutpat, rhoncus sem sit amet, dignissim erat. Nullam elementum eget
+        arcu in tristique. Nulla id consequat libero. Donec consectetur velit
+        sed lectus sodales, at ullamcorper massa tempus. Maecenas nec mattis
+        tortor. Suspendisse vel fermentum arcu. Mauris quis diam leo. Sed magna
+        eros, interdum at ultricies at, ullamcorper quis nisi. Aenean pretium
+        rhoncus feugiat. Fusce cursus nisl vel mi mollis pulvinar. Proin
+        tincidunt nulla ligula, ut rutrum nibh dignissim nec. Aliquam euismod
+        sollicitudin est vel mollis. Quisque condimentum felis non nibh laoreet
+        posuere. Suspendisse potenti. Curabitur volutpat mattis tellus, quis
+        iaculis libero laoreet eget. In sodales pharetra felis, ac fermentum
+        mauris aliquam nec. Morbi pellentesque odio ut enim vestibulum, a
+        efficitur elit scelerisque. Aliquam aliquet placerat augue et gravida.
+        Proin eleifend, massa a sagittis pulvinar, eros massa elementum mi, non
+        molestie dolor odio vitae massa. Quisque dignissim metus at ipsum
+        luctus, sed porttitor orci egestas. Interdum et malesuada fames ac ante
+        ipsum primis in faucibus. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit. Praesent ipsum erat, eleifend nec erat at, euismod
+        varius nisl. Curabitur vel quam sagittis, tempus mauris et, venenatis
+        arcu. Nam ut elit quam. Vestibulum pretium felis non neque imperdiet
+        dapibus. Fusce quis felis sit amet urna congue placerat. Sed lobortis
+        risus eu velit rhoncus, a elementum nisi aliquam. Vestibulum ante ipsum
+        primis in faucibus orci luctus et ultrices posuere cubilia curae;
+        Quisque euismod porta orci faucibus porttitor. Nullam posuere arcu sed
+        diam efficitur, a tempor neque ullamcorper. Vivamus eget euismod risus,
+        in lacinia diam. Pellentesque nec erat quam. Cras nec mollis ipsum,
+        vitae bibendum velit. Cras auctor, ligula ac imperdiet condimentum, sem
+        odio finibus massa, ut vestibulum eros eros pellentesque lectus. Quisque
+        ac lectus suscipit mauris iaculis ultrices vitae a sem. Morbi magna
+        lorem, fringilla id enim at, viverra cursus est. Donec a dapibus arcu.
+        Etiam ultricies justo ipsum, sed varius elit facilisis eget. Nunc
+        blandit purus leo, finibus maximus tortor feugiat vitae. Nam eget ipsum
+        ac dolor suscipit vulputate. Ut varius nisl varius massa ornare, eget
+        rutrum magna ultrices. Duis eget sem at diam volutpat sollicitudin.
+        Donec sit amet nunc nulla. In lacinia bibendum turpis vel eleifend.
+        Etiam quis malesuada libero, a tempus urna. Curabitur eget congue
+        sapien, non fermentum ligula. Integer in enim quis erat euismod lobortis
+        at in quam. Nunc efficitur felis quis neque ullamcorper imperdiet.
+        Vivamus lobortis nibh sit amet lectus gravida, sit amet efficitur ex
+        ultrices. Mauris condimentum turpis non leo mollis, nec tincidunt ipsum
+        iaculis. Mauris eu condimentum ligula, eget facilisis arcu. Aenean
+        malesuada viverra blandit. Nunc in blandit nibh. Vestibulum dapibus elit
+        in condimentum facilisis. Donec non rhoncus ipsum, at hendrerit sapien.
+        Ut eleifend porta luctus. Vestibulum euismod sed nisi ut ornare. Nam
+        libero mi, mattis a dapibus sit amet, vehicula sagittis eros. Sed
+        posuere lacinia quam ac posuere. Fusce lacus libero, maximus vel aliquam
+        quis, ullamcorper eu nunc. Donec pulvinar quam et sagittis condimentum.
+        Cras at tellus sit amet erat vulputate aliquet eu sed mi. Nam euismod
+        dolor n
+      </p>
+    </section>
+    <section
+      class="grid max-w-screen-xl grid-cols-3 gap-10 px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8"
+    >
+      <a href="#" class="relative block group" id="card">
+        <div class="relative h-[350px] sm:h-[450px]">
+          <img
+            src="https://images.unsplash.com/photo-1593795899768-947c4929449d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2672&q=80"
+            alt=""
+            class="absolute inset-0 object-cover w-full h-full opacity-100 group-hover:opacity-0"
+          />
+
+          <img
+            src="https://images.unsplash.com/photo-1593795899630-b6033c0fa58d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+            alt=""
+            class="absolute inset-0 object-cover w-full h-full opacity-0 group-hover:opacity-100"
+          />
+        </div>
+
+        <div class="absolute inset-0 flex flex-col items-start justify-end p-6">
+          <h3 class="text-xl font-medium text-white">Skinny Jeans Blue</h3>
+
+          <p class="mt-1.5 text-pretty text-xs text-white">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+            sequi dicta impedit aperiam ipsum!
+          </p>
+
+          <span
+            class="inline-block px-5 py-3 mt-3 text-xs font-medium tracking-wide text-white uppercase bg-black"
+          >
+            Shop Now
+          </span>
+        </div>
+      </a>
+      <a href="#" class="relative block group" id="card">
+        <div class="relative h-[350px] sm:h-[450px]">
+          <img
+            src="https://images.unsplash.com/photo-1593795899768-947c4929449d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2672&q=80"
+            alt=""
+            class="absolute inset-0 object-cover w-full h-full opacity-100 group-hover:opacity-0"
+          />
+
+          <img
+            src="https://images.unsplash.com/photo-1593795899630-b6033c0fa58d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+            alt=""
+            class="absolute inset-0 object-cover w-full h-full opacity-0 group-hover:opacity-100"
+          />
+        </div>
+
+        <div class="absolute inset-0 flex flex-col items-start justify-end p-6">
+          <h3 class="text-xl font-medium text-white">Skinny Jeans Blue</h3>
+
+          <p class="mt-1.5 text-pretty text-xs text-white">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+            sequi dicta impedit aperiam ipsum!
+          </p>
+
+          <span
+            class="inline-block px-5 py-3 mt-3 text-xs font-medium tracking-wide text-white uppercase bg-black"
+          >
+            Shop Now
+          </span>
+        </div>
+      </a>
+      <a href="#" class="relative block group" id="card">
+        <div class="relative h-[350px] sm:h-[450px]">
+          <img
+            src="https://images.unsplash.com/photo-1593795899768-947c4929449d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2672&q=80"
+            alt=""
+            class="absolute inset-0 object-cover w-full h-full opacity-100 group-hover:opacity-0"
+          />
+
+          <img
+            src="https://images.unsplash.com/photo-1593795899630-b6033c0fa58d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+            alt=""
+            class="absolute inset-0 object-cover w-full h-full opacity-0 group-hover:opacity-100"
+          />
+        </div>
+
+        <div class="absolute inset-0 flex flex-col items-start justify-end p-6">
+          <h3 class="text-xl font-medium text-white">Skinny Jeans Blue</h3>
+
+          <p class="mt-1.5 text-pretty text-xs text-white">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+            sequi dicta impedit aperiam ipsum!
+          </p>
+
+          <span
+            class="inline-block px-5 py-3 mt-3 text-xs font-medium tracking-wide text-white uppercase bg-black"
+          >
+            Shop Now
+          </span>
+        </div>
+      </a>
+    </section>
+    <section>
+      <div class="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
+        <div class="text-center">
+          <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">
+            New Collection
+          </h2>
+
+          <p class="max-w-md mx-auto mt-4 text-gray-500">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque
+            praesentium cumque iure dicta incidunt est ipsam, officia dolor
+            fugit natus?
+          </p>
+        </div>
+
+        <ul class="grid grid-cols-1 gap-4 mt-8 lg:grid-cols-3">
+          <li>
+            <a href="#" class="relative block group">
+              <img
+                src="https://images.unsplash.com/photo-1618898909019-010e4e234c55?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                alt=""
+                class="object-cover w-full transition duration-500 aspect-square group-hover:opacity-90"
+              />
+
+              <div
+                class="absolute inset-0 flex flex-col items-start justify-end p-6"
+              >
+                <h3 class="text-xl font-medium text-white">Casual Trainers</h3>
+
+                <span
+                  class="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
+                >
+                  Shop Now
+                </span>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="relative block group">
+              <img
+                src="https://images.unsplash.com/photo-1624623278313-a930126a11c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                alt=""
+                class="object-cover w-full transition duration-500 aspect-square group-hover:opacity-90"
+              />
+
+              <div
+                class="absolute inset-0 flex flex-col items-start justify-end p-6"
+              >
+                <h3 class="text-xl font-medium text-white">Winter Jumpers</h3>
+
+                <span
+                  class="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
+                >
+                  Shop Now
+                </span>
+              </div>
+            </a>
+          </li>
+
+          <li class="lg:col-span-2 lg:col-start-2 lg:row-span-2 lg:row-start-1">
+            <a href="#" class="relative block group">
+              <img
+                src="https://images.unsplash.com/photo-1593795899768-947c4929449d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2672&q=80"
+                alt=""
+                class="object-cover w-full transition duration-500 aspect-square group-hover:opacity-90"
+              />
+
+              <div
+                class="absolute inset-0 flex flex-col items-start justify-end p-6"
+              >
+                <h3 class="text-xl font-medium text-white">
+                  Skinny Jeans Blue
+                </h3>
+
+                <span
+                  class="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
+                >
+                  Shop Now
+                </span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <footer class="bg-white">
+      <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
+        <div class="lg:flex lg:items-start lg:gap-8">
+          <div class="text-teal-600">
+            <svg
+              class="h-8"
+              viewBox="0 0 28 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0.41 10.3847C1.14777 7.4194 2.85643 4.7861 5.2639 2.90424C7.6714 1.02234 10.6393 0 13.695 0C16.7507 0 19.7186 1.02234 22.1261 2.90424C24.5336 4.7861 26.2422 7.4194 26.98 10.3847H25.78C23.7557 10.3549 21.7729 10.9599 20.11 12.1147C20.014 12.1842 19.9138 12.2477 19.81 12.3047H19.67C19.5662 12.2477 19.466 12.1842 19.37 12.1147C17.6924 10.9866 15.7166 10.3841 13.695 10.3841C11.6734 10.3841 9.6976 10.9866 8.02 12.1147C7.924 12.1842 7.8238 12.2477 7.72 12.3047H7.58C7.4762 12.2477 7.376 12.1842 7.28 12.1147C5.6171 10.9599 3.6343 10.3549 1.61 10.3847H0.41ZM23.62 16.6547C24.236 16.175 24.9995 15.924 25.78 15.9447H27.39V12.7347H25.78C24.4052 12.7181 23.0619 13.146 21.95 13.9547C21.3243 14.416 20.5674 14.6649 19.79 14.6649C19.0126 14.6649 18.2557 14.416 17.63 13.9547C16.4899 13.1611 15.1341 12.7356 13.745 12.7356C12.3559 12.7356 11.0001 13.1611 9.86 13.9547C9.2343 14.416 8.4774 14.6649 7.7 14.6649C6.9226 14.6649 6.1657 14.416 5.54 13.9547C4.4144 13.1356 3.0518 12.7072 1.66 12.7347H0V15.9447H1.61C2.39051 15.924 3.154 16.175 3.77 16.6547C4.908 17.4489 6.2623 17.8747 7.65 17.8747C9.0377 17.8747 10.392 17.4489 11.53 16.6547C12.1468 16.1765 12.9097 15.9257 13.69 15.9447C14.4708 15.9223 15.2348 16.1735 15.85 16.6547C16.9901 17.4484 18.3459 17.8738 19.735 17.8738C21.1241 17.8738 22.4799 17.4484 23.62 16.6547ZM23.62 22.3947C24.236 21.915 24.9995 21.664 25.78 21.6847H27.39V18.4747H25.78C24.4052 18.4581 23.0619 18.886 21.95 19.6947C21.3243 20.156 20.5674 20.4049 19.79 20.4049C19.0126 20.4049 18.2557 20.156 17.63 19.6947C16.4899 18.9011 15.1341 18.4757 13.745 18.4757C12.3559 18.4757 11.0001 18.9011 9.86 19.6947C9.2343 20.156 8.4774 20.4049 7.7 20.4049C6.9226 20.4049 6.1657 20.156 5.54 19.6947C4.4144 18.8757 3.0518 18.4472 1.66 18.4747H0V21.6847H1.61C2.39051 21.664 3.154 21.915 3.77 22.3947C4.908 23.1889 6.2623 23.6147 7.65 23.6147C9.0377 23.6147 10.392 23.1889 11.53 22.3947C12.1468 21.9165 12.9097 21.6657 13.69 21.6847C14.4708 21.6623 15.2348 21.9135 15.85 22.3947C16.9901 23.1884 18.3459 23.6138 19.735 23.6138C21.1241 23.6138 22.4799 23.1884 23.62 22.3947Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+
+          <div
+            class="grid grid-cols-2 gap-8 mt-8 lg:mt-0 lg:grid-cols-5 lg:gap-y-16"
+          >
+            <div class="col-span-2">
+              <div>
+                <h2 class="text-2xl font-bold text-gray-900">
+                  Get the latest news!
+                </h2>
+
+                <p class="mt-4 text-gray-500">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse
+                  non cupiditate quae nam molestias.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-span-2 lg:col-span-3 lg:flex lg:items-end">
+              <form class="w-full">
+                <label for="UserEmail" class="sr-only"> Email </label>
+
+                <div
+                  class="p-2 border border-gray-100 focus-within:ring sm:flex sm:items-center sm:gap-4"
+                >
+                  <input
+                    type="email"
+                    id="UserEmail"
+                    placeholder="john@rhcp.com"
+                    class="w-full border-none focus:border-transparent focus:ring-transparent sm:text-sm"
+                  />
+
+                  <button
+                    class="w-full px-6 py-3 mt-1 text-sm font-bold tracking-wide text-white uppercase transition-none bg-teal-500 hover:bg-teal-600 sm:mt-0 sm:w-auto sm:shrink-0"
+                  >
+                    Sign Up
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <div class="col-span-2 sm:col-span-1">
+              <p class="font-medium text-gray-900">Services</p>
+
+              <ul class="mt-6 space-y-4 text-sm">
+                <li>
+                  <a href="#" class="text-gray-700 transition hover:opacity-75">
+                    1on1 Coaching
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="text-gray-700 transition hover:opacity-75">
+                    Company Review
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="text-gray-700 transition hover:opacity-75">
+                    Accounts Review
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="text-gray-700 transition hover:opacity-75">
+                    HR Consulting
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="text-gray-700 transition hover:opacity-75">
+                    SEO Optimisation
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-span-2 sm:col-span-1">
+              <p class="font-medium text-gray-900">Company</p>
+
+              <ul class="mt-6 space-y-4 text-sm">
+                <li>
+                  <a href="#" class="text-gray-700 transition hover:opacity-75">
+                    About
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="text-gray-700 transition hover:opacity-75">
+                    Meet the Team
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="text-gray-700 transition hover:opacity-75">
+                    Accounts Review
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-span-2 sm:col-span-1">
+              <p class="font-medium text-gray-900">Helpful Links</p>
+
+              <ul class="mt-6 space-y-4 text-sm">
+                <li>
+                  <a href="#" class="text-gray-700 transition hover:opacity-75">
+                    Contact
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="text-gray-700 transition hover:opacity-75">
+                    FAQs
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="text-gray-700 transition hover:opacity-75">
+                    Live Chat
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-span-2 sm:col-span-1">
+              <p class="font-medium text-gray-900">Legal</p>
+
+              <ul class="mt-6 space-y-4 text-sm">
+                <li>
+                  <a href="#" class="text-gray-700 transition hover:opacity-75">
+                    Accessibility
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="text-gray-700 transition hover:opacity-75">
+                    Returns Policy
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="text-gray-700 transition hover:opacity-75">
+                    Refund Policy
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="text-gray-700 transition hover:opacity-75">
+                    Hiring Statistics
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-span-2 sm:col-span-1">
+              <p class="font-medium text-gray-900">Downloads</p>
+
+              <ul class="mt-6 space-y-4 text-sm">
+                <li>
+                  <a href="#" class="text-gray-700 transition hover:opacity-75">
+                    Marketing Calendar
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="text-gray-700 transition hover:opacity-75">
+                    SEO Infographics
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <ul
+              class="flex justify-start col-span-2 gap-6 lg:col-span-5 lg:justify-end"
+            >
+              <li>
+                <a
+                  href="#"
+                  rel="noreferrer"
+                  target="_blank"
+                  class="text-gray-700 transition hover:opacity-75"
+                >
+                  <span class="sr-only">Facebook</span>
+
+                  <svg
+                    class="w-6 h-6"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  rel="noreferrer"
+                  target="_blank"
+                  class="text-gray-700 transition hover:opacity-75"
+                >
+                  <span class="sr-only">Instagram</span>
+
+                  <svg
+                    class="w-6 h-6"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  rel="noreferrer"
+                  target="_blank"
+                  class="text-gray-700 transition hover:opacity-75"
+                >
+                  <span class="sr-only">Twitter</span>
+
+                  <svg
+                    class="w-6 h-6"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
+                    />
+                  </svg>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  rel="noreferrer"
+                  target="_blank"
+                  class="text-gray-700 transition hover:opacity-75"
+                >
+                  <span class="sr-only">GitHub</span>
+
+                  <svg
+                    class="w-6 h-6"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  rel="noreferrer"
+                  target="_blank"
+                  class="text-gray-700 transition hover:opacity-75"
+                >
+                  <span class="sr-only">Dribbble</span>
+
+                  <svg
+                    class="w-6 h-6"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="pt-8 mt-8 border-t border-gray-100">
+          <div class="sm:flex sm:justify-between">
+            <p class="text-xs text-gray-500">
+              &copy; 2022. Company Name. All rights reserved.
+            </p>
+
+            <ul
+              class="flex flex-wrap justify-start gap-4 mt-8 text-xs sm:mt-0 lg:justify-end"
+            >
+              <li>
+                <a href="#" class="text-gray-500 transition hover:opacity-75">
+                  Terms & Conditions
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="text-gray-500 transition hover:opacity-75">
+                  Privacy Policy
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="text-gray-500 transition hover:opacity-75">
+                  Cookies
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
