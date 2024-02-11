@@ -1,5 +1,4 @@
 const follow = document.getElementById('follow');
-const title = document.getElementById('title');
 const readingTime = document.querySelectorAll('.readingTime');
 const likeClap = document.getElementById('likes');
 const likeCount = document.getElementById('likeCount');
@@ -7,8 +6,6 @@ const stars = document.querySelectorAll('.star');
 const imgText = document.getElementById('imgText');
 
 let checkStatus = 0;
-
-title.innerText = 'Breaking Through the Code Barrier';
 
 window.onscroll = () => {
   const scrollFunction = () => {
