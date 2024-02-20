@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="https://a.storyblok.com/f/103666/715x402/fcdcaf318a/download.webp"
+      fetchpriority="high"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,400;1,6..12,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              nunito: ['Nunito', 'sans-serif'],
+            },
+            colors: {
+              clifford: '#da373d',
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-nunito">
+    <div class="fixed top-0 left-0 w-full h-3 bg-black">
+      <div id="myBar" class="h-full bg-green-500"></div>
+    </div>
+    <section class="max-w-screen-lg px-4 py-8 mx-auto cardDetails sm:px-6 sm:pt-12 lg:px-8">
+      <h1 id="title"
+        class="text-2xl font-bold text-gray-900 sm:text-3xl font-nunito"  
+      >Breaking Through the Code Barrier</h1>
+      <div class="flex mt-6 space-x-4">
+        <img id="img"
+          class="object-cover rounded-full w-11 h-11"
+          src="https://a.storyblok.com/f/103666/1920x1272/b326980d7b/test.jpeg"
+          alt="Rounded avatar"
+        />
+        <div class="space-y-2">
+          <p>
+             <span id="author">Dhan Bir Sunwar</span>
+            <span class="pl-2 text-red-500 cursor-pointer" id="follow"
+              >Follow</span
+            >
+          </p>
+          <p class="text-sm text-gray-500/75">
+            <span class="readingTime">10 min read </span>
+            <span id="date" class="pl-8">Feb 12, 2024</span>
+          </p>
+        </div>
+      </div>
+      <img
+      id="imgText"
+        src="https://a.storyblok.com/f/103666/1920x1272/b326980d7b/test.jpeg"
+        alt=""
+        class="object-cover w-full h-full mt-10 mix-blend-overlay"
+        style="
+          background-image: url('https://a.storyblok.com/f/103666/715x402/fcdcaf318a/download.webp');
+        "
+      />
+    <article
+      id="article"
+      class="max-w-screen-lg py-8 mx-auto sm:pb-12"
+    >
+    <p id="story"></p>
+      <div class="flex gap-12 mt-10 mb-4 text-sm text-gray-500/75">
+        <p class="text-sm">Reading compleated: <span id="progress"></span></p>
+        <i
+          class="flex items-center text-xl cursor-pointer ri-shake-hands-line"
+          id="likes"
+        ><span class="pl-1 text-sm" id="likeCount">0</span></i>
+        </i>
+      </div>
+      <p class="text-sm text-gray-500/75 readingTime">10 min read</p>
+      <div id="rating-container" class="hidden mt-10">
+          <p>How much rating would you like to give for this book?</p>
+         <div class="flex justify-between">
+           <div class="flex space-x-2">
+            <i class="text-2xl text-gray-500 cursor-pointer ri-star-line star"></i>
+            <i class="text-2xl text-gray-500 cursor-pointer ri-star-line star"></i>
+            <i class="text-2xl text-gray-500 cursor-pointer ri-star-line star"></i>
+            <i class="text-2xl text-gray-500 cursor-pointer ri-star-line star"></i>
+            <i class="text-2xl text-gray-500 cursor-pointer ri-star-line star"></i>
+          </div>
+       <div id="rating-percentage"></div>
+         </div>
+
+      </div>
+    </article>
+    <!-- Scroll-to-top button -->
+<button id="scrollToTop" class="fixed p-2 text-gray-700 transition-colors duration-200 bg-gray-200 rounded-full shadow-md bottom-4 right-4 hover:bg-gray-300" title="Go to top">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0  0  24  24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5  15l7-7  7  7" />
+    </svg>
+</button>
+
+    </section>
+   
+    <footer class="bg-gray-50">
+      <div class="max-w-screen-lg px-4 py-8 mx-auto sm:px-6 lg:px-8">
+        <div class="sm:flex sm:items-center sm:justify-between">
+          <div class="flex justify-center text-teal-600 sm:justify-start">
+            <img
+              src="assets/instagramProfile-110x110px.png"
+              alt=""
+              width="32"
+              height="32"
+            />
+          </div>
+
+          <p
+            class="mt-4 text-sm text-center text-gray-500 lg:mt-0 lg:text-right"
+          >
+            Copyright &copy;
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            . All rights reserved. Dhan Bir Sunwar.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="./script/details.js"></script>
+  </body>
+</html>
+

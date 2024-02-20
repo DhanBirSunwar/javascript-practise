@@ -21,133 +21,64 @@
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,400;1,6..12,600&display=swap"
       rel="stylesheet"
     />
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              nunito: ['Nunito', 'sans-serif'],
-            },
-            colors: {
-              clifford: '#da373d',
-            },
-          },
-        },
-      };
-    </script>
   </head>
   <body class="font-nunito">
-    <div class="fixed top-0 left-0 w-full h-3 bg-black">
-      <div id="myBar" class="h-full bg-green-500"></div>
-    </div>
-    <section class="max-w-screen-lg px-4 py-8 mx-auto sm:px-6 sm:pt-12 lg:px-8">
-      <h1
-        class="text-2xl font-bold text-gray-900 sm:text-3xl font-nunito"
-      >Breaking Through the Code Barrier</h1>
-      <div class="mt-6 flex space-x-4">
+    <header
+      class="navigation relative z-[333] w-full px-5 py-5 flex items-center gap-5 font-['Gilroy']"
+    >
+      <div class="logo">
         <img
-          class="w-11 h-11 rounded-full object-cover"
-          src="https://a.storyblok.com/f/103666/1920x1272/b326980d7b/test.jpeg"
-          alt="Rounded avatar"
+          src="assets/instagramProfile-110x110px.png"
+          alt=""
+          width="32"
+          height="32"
         />
-        <div class="space-y-2">
-          <p>
-            Dhan Bir Sunwar
-            <span class="text-red-500 pl-2 cursor-pointer" id="follow"
-              >Follow</span
-            >
-          </p>
-          <p class="text-sm text-gray-500/75 readingTime">
-            10 min read <span class="pl-8">Feb 12, 2024</span>
-          </p>
+      </div>
+      <div class="flex gap-5 links">
+        <a id="home" class="font-semibold whitespace-nowrap" href="#">Home</a>
+        <a class="font-semibold whitespace-nowrap" href="#">Explore</a>
+      </div>
+      <div class="flex w-full rounded-full inputcontainer bg-zinc-200">
+        <div class="relative w-full input group">
+          <div
+            class="hidden searchdata w-[98%] min-h-20 bg-white absolute top-full left-1/2 -translate-x-1/2 rounded-md py-3"
+          ></div>
+          <input
+            id="searchinput"
+            type="text"
+            class="w-full px-5 py-3 font-semibold bg-transparent rounded-full outline-none"
+            placeholder="Search books that you want to read..."
+          />
+          <i
+            class="absolute hidden text-xl -translate-y-1/2 top-1/2 right-3 group-focus:block text-zinc-500 ri-close-line"
+          ></i>
         </div>
       </div>
-      <img
-      id="imgText"
-        src="https://a.storyblok.com/f/103666/1920x1272/b326980d7b/test.jpeg"
-        alt=""
-        class="object-cover w-full h-full mt-10 mix-blend-overlay"
-        style="
-          background-image: url('https://a.storyblok.com/f/103666/715x402/fcdcaf318a/download.webp');
-        "
-      />
-    </section>
-    <article
-      id="article"
-      class="max-w-screen-lg px-4 py-8 mx-auto sm:px-6 sm:pb-12 lg:px-8"
-    >
-      <p>
-        A title showcasing the determination and tenacity of a young man named
-        Alex, who lived in a bustling city filled with ambition and opportunity.
-        With a strong fascination for the digital realm and its endless
-        possibilities, Alex set out on a quest to become a skilled JavaScript
-        developer. Despite facing numerous hurdles, he never wavered in his
-        commitment to learning and growing as a programmer. Armed with an
-        unquenchable thirst for knowledge and an unbreakable spirit, Alex began
-        his journey towards his goal. The world of programming was complex and
-        daunting, but he was undeterred. Concepts like loops and conditionals
-        proved to be challenging, but Alex refused to let them be roadblocks on
-        his path. A title showcasing the determination and tenacity of a young
-        man named Alex, who lived in a bustling city filled with ambition and
-        opportunity. With a strong fascination for the digital realm and its
-        endless possibilities, Alex set out on a quest to become a skilled
-        JavaScript developer. Despite facing numerous hurdles, he never wavered
-        in his commitment to learning and growing as a programmer. Armed with an
-        unquenchable thirst for knowledge and an unbreakable spirit, Alex began
-        his journey towards his goal. The world of programming was complex and
-        daunting, but he was undeterred. Concepts like loops and conditionals
-        proved to be challenging, but Alex refused to let them be roadblocks on
-        his path. A title showcasing the determination and tenacity of a young
-        man named Alex, who lived in a bustling city filled with ambition and
-        opportunity. With a strong fascination for the digital realm and its
-        endless possibilities, Alex set out on a quest to become a skilled
-        JavaScript developer. Despite facing numerous hurdles, he never wavered
-        in his commitment to learning and growing as a programmer. Armed with an
-        unquenchable thirst for knowledge and an unbreakable spirit, Alex began
-        his journey towards his goal. The world of programming was complex and
-        daunting, but he was undeterred. Concepts like loops and conditionals
-        proved to be challenging, but Alex refused to let them be roadblocks on
-        his path.
-      </p>
-      <p>
-        A title showcasing the determination and tenacity of a young man named
-        Alex, who lived in a bustling city filled with ambition and opportunity.
-        With a strong fascination for the digital realm and its endless
-        possibilities, Alex set out on a quest to become a skilled JavaScript
-        developer. Despite facing numerous hurdles, he never wavered in his
-        commitment to learning and growing as a programmer. Armed with an
-        unquenchable thirst for knowledge and an unbreakable spirit, Alex began
-        his journey towards his goal. The world of programming was complex and
-        daunting, but he was undeterred. Concepts like loops and conditionals
-        proved to be challenging, but Alex refused to let them be roadblocks on
-        his path.
-      </p>
-
-      <div class="mt-10 text-sm text-gray-500/75 flex gap-12 mb-4">
-        <p class="text-sm">Reading compleated: <span id="progress"></span></p>
-        <i
-          class="ri-shake-hands-line cursor-pointer text-xl flex items-center"
-          id="likes"
-        ><span class="text-sm pl-1" id="likeCount">0</span></i>
-        </i>
+      <div class="flex items-center gap-6 iconsnpic">
+        <i class="text-2xl text-zinc-500 ri-notification-3-fill"></i>
+        <i class="text-2xl text-zinc-500 ri-message-3-fill"></i>
+        <div class="flex items-center gap-4 pic">
+          <div class="w-8 h-8 overflow-hidden rounded-full bg-zinc-400">
+            <img
+              class="object-cover w-full h-full"
+              src="https://i.pinimg.com/75x75_RS/7c/e3/5f/7ce35f668d34ba9bafaf066ea31f1e40.jpg"
+              alt=""
+            />
+          </div>
+          <i class="ri-arrow-down-s-line"></i>
+        </div>
       </div>
-      <p class="text-sm text-gray-500/75 readingTime">10 min read</p>
-      <div class="mt-10">
-              <p>How much rating would you like to give for this book?</p>
-<div class="flex space-x-2">
-  <i class="ri-star-line text-2xl cursor-pointer text-gray-500 star"></i>
-  <i class="ri-star-line text-2xl cursor-pointer text-gray-500 star"></i>
-  <i class="ri-star-line text-2xl cursor-pointer text-gray-500 star"></i>
-  <i class="ri-star-line text-2xl cursor-pointer text-gray-500 star"></i>
-  <i class="ri-star-line text-2xl cursor-pointer text-gray-500 star"></i>
-</div>
-      </div>
-    </article>
-
+    </header>
+    <div class="fixed hidden w-full h-screen overlay bg-black/80"></div>
+    <div
+      class="px-4 py-8 mx-auto max-w-screen-2xl sm:px-6 lg:px-8"
+      id="resultSearch"
+    ></div>
+    <section
+      class="grid grid-cols-4 gap-8 px-4 py-8 mx-auto cardContainer max-w-screen-2xl sm:px-6 lg:px-8"
+    ></section>
     <footer class="bg-gray-50">
-      <div class="max-w-screen-lg px-4 py-8 mx-auto sm:px-6 lg:px-8">
+      <div class="px-4 py-8 mx-auto max-w-screen-2xl sm:px-6 lg:px-8">
         <div class="sm:flex sm:items-center sm:justify-between">
           <div class="flex justify-center text-teal-600 sm:justify-start">
             <img
@@ -170,6 +101,21 @@
         </div>
       </div>
     </footer>
-    <script src="script.js"></script>
+    <script type="module" src="./script/index.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              nunito: ['Nunito', 'sans-serif'],
+            },
+            colors: {
+              clifford: '#da373d',
+            },
+          },
+        },
+      };
+    </script>
   </body>
 </html>
