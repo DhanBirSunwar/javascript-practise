@@ -5,8 +5,10 @@ const resultSearch = document.querySelector('#resultSearch');
 
 function showTheCards() {
   let clutter = '';
-  stories.forEach(function (dets, index) {
-    clutter += `<div id=${index}
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      stories.forEach(function (dets, index) {
+        clutter += `<div id=${index}
       class="block text-left bg-white rounded-lg shadow-lg dark:bg-neutral-700">
       <div class="h-[277px] overflow-hidden">
         <img class="rounded-t-lg h-full w-full" src="${dets.image}"
@@ -28,17 +30,30 @@ function showTheCards() {
       </div>
     </div>
     `;
-  });
-  cardContainer.innerHTML = clutter;
-  stories.forEach(function (dets) {
-    document
-      .getElementById(`${dets.id}`)
-      .addEventListener('click', function () {
-        window.location.href = `details.html?id=${dets.id}`;
       });
+      resolve(
+        (cardContainer.innerHTML = clutter),
+        stories.forEach(function (dets) {
+          document
+            .getElementById(`${dets.id}`)
+            .addEventListener('click', function () {
+              window.location.href = `details.html?id=${dets.id}`;
+            });
+        })
+      );
+    }, 100);
   });
 }
-showTheCards();
+
+async function cards() {
+  try {
+    const showingCards = await showTheCards();
+    return showingCards;
+  } catch {
+    console.error('Error in getting the data');
+  }
+}
+cards();
 
 function handleSearchFunctionality() {
   let input = document.querySelector('#searchinput');
